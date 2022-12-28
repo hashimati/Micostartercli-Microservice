@@ -1,0 +1,13 @@
+11:45:23.274 [main] INFO  i.m.context.DefaultBeanContext - Reading bootstrap environment configuration
+11:45:23.701 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11:45:23.917 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11:45:24.002 [main] INFO  i.m.l.AbstractLiquibaseMigration - Running migrations for database with qualifier [default]
+11:45:24.859 [main] DEBUG io.micronaut.data.query - Dropping Table: 
+DROP TABLE `fruits`
+11:45:24.859 [main] DEBUG io.micronaut.data.query - Executing CREATE statement: 
+CREATE TABLE `fruits` (`id` BIGINT AUTO_INCREMENT PRIMARY KEY,`name` VARCHAR(255) NOT NULL,`dateCreated` DATE,`dateUpdated` DATE);
+11:45:26.977 [main] INFO  io.micronaut.runtime.Micronaut - Startup completed in 4543ms. Server Running: http://localhost:3030
+11:45:27.495 [default-nioEventLoopGroup-1-2] INFO  i.m.d.registration.AutoRegistration - Registered service [fruit-service] with Eureka
+11:46:25.562 [default-nioEventLoopGroup-1-10] INFO  c.e.controllers.FruitController - find All
+11:46:25.593 [default-nioEventLoopGroup-1-10] INFO  com.example.services.FruitService - Find All
+11:46:25.625 [default-nioEventLoopGroup-1-10] DEBUG io.micronaut.data.query - Executing Query: SELECT fruit_.`id`,fruit_.`name`,fruit_.`dateCreated`,fruit_.`dateUpdated` FROM `fruits` fruit_
