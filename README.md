@@ -33,7 +33,7 @@ First run
 ```
 Then, run: 
 ```shell
-> cd FruitService
+> cd VegetableService
 > mc entity -e Vegetable
 ```
 Note: Ensure to select "No" in "Is Monolithic?" question, and configure "eureka" as localhost. 
